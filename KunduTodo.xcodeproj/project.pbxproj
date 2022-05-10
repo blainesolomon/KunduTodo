@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BC44D0AB2829E772000167E6 /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC44D0AA2829E772000167E6 /* Helpers.swift */; };
+		BC44D0AD2829E7E1000167E6 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC44D0AC2829E7E1000167E6 /* Model.swift */; };
+		BC44D0AF2829E803000167E6 /* CloudMan.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC44D0AE2829E803000167E6 /* CloudMan.swift */; };
 		BCE4DC192829D39B009566B8 /* KunduTodoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE4DC182829D39B009566B8 /* KunduTodoApp.swift */; };
 		BCE4DC1B2829D39B009566B8 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE4DC1A2829D39B009566B8 /* ContentView.swift */; };
 		BCE4DC1D2829D39C009566B8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BCE4DC1C2829D39C009566B8 /* Assets.xcassets */; };
@@ -14,11 +17,15 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		BC44D0AA2829E772000167E6 /* Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helpers.swift; sourceTree = "<group>"; };
+		BC44D0AC2829E7E1000167E6 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		BC44D0AE2829E803000167E6 /* CloudMan.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudMan.swift; sourceTree = "<group>"; };
 		BCE4DC152829D39B009566B8 /* KunduTodo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KunduTodo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BCE4DC182829D39B009566B8 /* KunduTodoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KunduTodoApp.swift; sourceTree = "<group>"; };
 		BCE4DC1A2829D39B009566B8 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		BCE4DC1C2829D39C009566B8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BCE4DC1F2829D39C009566B8 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		BCE4DC262829D40F009566B8 /* KunduTodo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = KunduTodo.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,8 +58,12 @@
 		BCE4DC172829D39B009566B8 /* KunduTodo */ = {
 			isa = PBXGroup;
 			children = (
+				BCE4DC262829D40F009566B8 /* KunduTodo.entitlements */,
 				BCE4DC182829D39B009566B8 /* KunduTodoApp.swift */,
 				BCE4DC1A2829D39B009566B8 /* ContentView.swift */,
+				BC44D0AE2829E803000167E6 /* CloudMan.swift */,
+				BC44D0AA2829E772000167E6 /* Helpers.swift */,
+				BC44D0AC2829E7E1000167E6 /* Model.swift */,
 				BCE4DC1C2829D39C009566B8 /* Assets.xcassets */,
 				BCE4DC1E2829D39C009566B8 /* Preview Content */,
 			);
@@ -138,7 +149,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				BCE4DC1B2829D39B009566B8 /* ContentView.swift in Sources */,
+				BC44D0AB2829E772000167E6 /* Helpers.swift in Sources */,
 				BCE4DC192829D39B009566B8 /* KunduTodoApp.swift in Sources */,
+				BC44D0AD2829E7E1000167E6 /* Model.swift in Sources */,
+				BC44D0AF2829E803000167E6 /* CloudMan.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -264,6 +278,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = KunduTodo/KunduTodo.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"KunduTodo/Preview Content\"";
@@ -275,6 +290,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Dark;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -282,6 +298,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.demo.KunduTodo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -293,6 +310,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = KunduTodo/KunduTodo.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"KunduTodo/Preview Content\"";
@@ -304,6 +322,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Dark;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -311,6 +330,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.demo.KunduTodo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
